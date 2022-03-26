@@ -8,6 +8,10 @@
     "*"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubber-duck-software/react-pdf-hook"
+  },
   "scripts": {
     "lint": "prettier --check ./src",
     "format": "prettier --write .",
