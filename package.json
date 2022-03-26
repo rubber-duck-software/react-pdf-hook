@@ -2,7 +2,7 @@
   "name": "react-pdf-hook",
   "description": "The easiest way to usePdf()",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "index.js",
   "types": "index.d.ts",
   "files": [
     "*"
