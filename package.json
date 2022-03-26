@@ -16,7 +16,7 @@
     "lint": "prettier --check ./src",
     "format": "prettier --write .",
     "build": "tsc",
-    "build-package": "./scripts/release.sh"
+    "build-package": "./release.sh"
   },
   "dependencies": {},
   "devDependencies": {
