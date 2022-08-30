@@ -10,7 +10,7 @@ export interface PageCanvasOptions {
 }
 
 export interface usePageCanvasResult {
-  canvasRef: React.RefObject<HTMLCanvasElement | null>
+  canvasRef: React.RefObject<HTMLCanvasElement>
   isLoading: boolean
   isError: boolean
   isIdle: boolean
@@ -19,7 +19,7 @@ export interface usePageCanvasResult {
 
 export function usePageCanvas(page: PDFPageProxy | null | undefined, options: PageCanvasOptions): usePageCanvasResult {
   const getPage = useStableAccessor(page)
-  const canvasLayerRef = React.useRef<HTMLCanvasElement | null>(null)
+  const canvasLayerRef = React.useRef<HTMLCanvasElement>(null)
   const [renderStatus, setRenderStatus] = React.useState<Status>('not_started')
   const [_, setRenderingTask] = React.useState<RenderTask | null>(null)
   const cancelRenderingTask = React.useCallback(() => {
