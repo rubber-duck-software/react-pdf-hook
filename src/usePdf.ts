@@ -16,7 +16,7 @@ export interface usePdfResult {
   isError: boolean
   pdf: PDFDocumentProxy | null
   page: PDFPageProxy | null
-  canvasRef: React.RefObject<HTMLCanvasElement | null>
+  canvasRef: React.RefObject<HTMLCanvasElement>
 }
 
 export function usePdf(
