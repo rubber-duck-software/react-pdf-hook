@@ -30,13 +30,7 @@ export function usePage(pdf: PDFDocumentProxy | null | undefined, pageNumber: nu
     })
   }, [setRunningTask])
 
-  const page = React.useRef<PDFPageProxy | null>(null)
-  const setPage = React.useCallback(
-    (newValue) => {
-      page.current = newValue
-    },
-    [page]
-  )
+  const [page, setPage] = React.useState<PDFPageProxy | null>(null)
 
   React.useEffect(() => {
     if (!pdf || !pageNumber) {
@@ -63,9 +57,9 @@ export function usePage(pdf: PDFDocumentProxy | null | undefined, pageNumber: nu
       cancelRunningTask()
     }
   }, [pageNumber, pdf, cancelRunningTask])
-  if (status === 'success' && page.current) {
+  if (status === 'success' && page) {
     return {
-      page: page.current,
+      page: page,
       isSuccess: true,
       isError: false,
       isIdle: false,
