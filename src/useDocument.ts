@@ -168,7 +168,7 @@ async function findDocumentSource(
   } else if (file instanceof pdfJs.PDFDataRangeTransport) {
     return { range: file }
   } else if (isArrayBuffer(file)) {
-    return { data: file }
+    return { data: new Uint8Array(file) }
   } else if (isBrowser) {
     // File is a Blob
     if (isBlob(file) || isFile(file)) {

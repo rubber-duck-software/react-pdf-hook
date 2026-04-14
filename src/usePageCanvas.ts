@@ -10,7 +10,7 @@ export interface PageCanvasOptions {
 }
 
 export interface usePageCanvasResult {
-  canvasRef: React.RefObject<HTMLCanvasElement>
+  canvasRef: React.RefObject<HTMLCanvasElement | null>
   isLoading: boolean
   isError: boolean
   isIdle: boolean
@@ -38,7 +38,7 @@ export function usePageCanvas(page: PDFPageProxy | null | undefined, options: Pa
     setRenderingTask(null)
   }, [setRenderingTask])
 
-  const onRenderError = React.useCallback((error) => {
+  const onRenderError = React.useCallback((error: any) => {
     setRenderStatus('error')
     if (isCancelException(error)) {
       return
