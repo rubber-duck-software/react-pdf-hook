@@ -1,6 +1,7 @@
 # Cache and IDE-related files
 .cache
 .idea
+.envrc
 
 # Yarn-related files
 **/.yarn/*
