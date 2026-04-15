@@ -3,12 +3,8 @@
 .idea
 .envrc
 
-# Yarn-related files
-**/.yarn/*
-!**/.yarn/releases
-!**/.yarn/plugins
-!**/.yarn/sdks
-yarn-error.log
+# npm debug log
+npm-debug.log
 
 # Project-generated directories
 coverage

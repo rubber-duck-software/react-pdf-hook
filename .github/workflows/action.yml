@@ -20,14 +20,11 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Update npm
-        run: npm install -g npm@latest
-
       - name: Install Deps
-        run: yarn install
+        run: npm install
 
       - name: Build Release Package
-        run: yarn build-package
+        run: npm run build-package
 
       - name: Publish To NPM
         run: npm publish ./package --provenance --access public
