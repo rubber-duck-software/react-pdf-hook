@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build Release Package
-        run: npm run build-package
+        run: npm run build
 
       - name: Publish To NPM
-        run: npm publish ./package --provenance --access public
+        run: npm publish --provenance --access public

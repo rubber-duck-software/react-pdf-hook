@@ -1,0 +1,20 @@
+# Changelog
+
+## 2.0.0
+
+### Breaking changes
+
+- **The package is now ESM-only.** Output is published as an ES module
+  (`"type": "module"`) with a single `import` entry in `exports`. CommonJS
+  `require('react-pdf-hook')` is no longer supported — consume it with `import`,
+  or use a dynamic `import()` from a CommonJS context.
+
+### Changed
+
+- Build tooling migrated from `tsc` to [tsdown](https://tsdown.dev). The
+  published bundle now lives in `dist/` (`dist/index.js`, `dist/index.d.ts`)
+  with source maps included. `tsc` is retained for type-checking only
+  (`npm run typecheck`).
+- `pdfjs-dist` is now declared as an optional peer dependency. It is required
+  only if you consume the exported `pdfjs-dist` types; the runtime bundle does
+  not depend on it.

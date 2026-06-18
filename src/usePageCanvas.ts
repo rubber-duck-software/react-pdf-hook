@@ -1,6 +1,6 @@
-import { PDFPageProxy, RenderTask } from 'pdfjs-dist'
+import type { PDFPageProxy, RenderTask } from 'pdfjs-dist'
 import React from 'react'
-import { getPixelRatio, getScale, isCancelException, useStableAccessor, Status } from './helpers'
+import { getPixelRatio, getScale, isCancelException, useStableAccessor, Status } from './helpers.ts'
 
 export interface PageCanvasOptions {
   scale?: number | undefined

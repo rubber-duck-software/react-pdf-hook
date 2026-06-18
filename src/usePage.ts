@@ -1,6 +1,6 @@
-import { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist'
+import type { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist'
 import React from 'react'
-import { Status, CancelablePromise, makeCancellablePromise } from './helpers'
+import { Status, CancelablePromise, makeCancellablePromise } from './helpers.ts'
 
 export type usePageResults =
   | {

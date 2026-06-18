@@ -1,11 +1,20 @@
 {
   "name": "react-pdf-hook",
   "description": "The easiest way to usePdf()",
-  "version": "1.0.4",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "version": "2.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
-    "*"
+    "dist",
+    "CHANGELOG"
   ],
   "license": "MIT",
   "repository": {
@@ -15,18 +24,25 @@
   "scripts": {
     "lint": "prettier --check ./src",
     "format": "prettier --write .",
-    "build": "tsc",
-    "build-package": "./release.sh"
+    "typecheck": "tsc",
+    "build": "tsdown"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^19.0.0",
     "pdfjs-dist": "^2.13.216",
     "prettier": "^2.6.1",
+    "tsdown": "^0.15.6",
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
+    "pdfjs-dist": "^2.13.216",
     "react": "^16.3.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^16.3.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "pdfjs-dist": {
+      "optional": true
+    }
   }
 }

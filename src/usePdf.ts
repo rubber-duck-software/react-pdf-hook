@@ -1,8 +1,8 @@
 import type { PDFDataRangeTransport, PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist'
-import { DocumentInitParameters, PdfJs, TypedArray } from './helpers'
-import { useDocument } from './useDocument'
-import { usePage } from './usePage'
-import { usePageCanvas } from './usePageCanvas'
+import { DocumentInitParameters, PdfJs, TypedArray } from './helpers.ts'
+import { useDocument } from './useDocument.ts'
+import { usePage } from './usePage.ts'
+import { usePageCanvas } from './usePageCanvas.ts'
 
 export interface usePdfOptions {
   onPassword?(callback: (password: string) => unknown, reason: number): unknown

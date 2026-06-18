@@ -1,4 +1,4 @@
-import { PDFDataRangeTransport, PDFDocumentLoadingTask, PDFDocumentProxy } from 'pdfjs-dist'
+import type { PDFDataRangeTransport, PDFDocumentLoadingTask, PDFDocumentProxy } from 'pdfjs-dist'
 import React from 'react'
 import {
   CancelablePromise,
@@ -16,7 +16,7 @@ import {
   useStableAccessor,
   TypedArray,
   DocumentInitParameters
-} from './helpers'
+} from './helpers.ts'
 
 export interface useDocumentOptions {
   onPassword?(callback: (password: string) => unknown, reason: number): unknown
